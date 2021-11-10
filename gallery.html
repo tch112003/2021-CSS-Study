@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <style>
+        body {
+            background-color: lightcyan;
+        }
+
+        .container {
+            color: black;
+            background-color: white;
+            width: 90%;
+            margin: auto;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+            /*background-color: cyan;*/
+            text-align: center;
+            vertical-align: middle;
+            font-size: 75px;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover:not(.active), dropdown:hover .dropButton {
+            background-color: #111;
+        }
+
+        .active {
+            background-color: #04AA6D;
+        }
+
+        #content {
+            float: left;
+            width: 75%;
+            padding-top: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        #sidebar {
+
+        }
+        #footer{
+            text-align: center;
+            padding: 20px;
+            font-size: 25px;
+            background-color: blue;
+            color: white;
+        }
+        div#footer a{
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown{
+            float:left;
+            overflow: hidden;
+        }
+        .dropdown .dropButton{
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: yellow;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin:0;
+        }
+        .dropdownContent{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdownContent a{
+            float:none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdownContent{
+            display:block;
+        }
+        .dropdownContent a:hover{
+            background-color: lightgrey;
+        }
+
+        /* Gallery Styles */
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 180px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 200px;
+            height: 200px;
+
+        }
+
+        div.desc {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div id="header">
+            Gallery
+        </div>
+    </div>
+    <div class="row">
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropButton">Socials
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdownContent">
+                        <a href="#">Facebook</a>
+                        <a href="#">Twiter</a>
+                        <a href="#">Snapchat</a>
+                        <a href="#">Whatsapp</a>
+                        <a href="#">Signal</a>
+                        <a href="#">LinkedIn</a>
+                    </div>
+                </div>
+
+
+            </li>
+            <li style="float:right;"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="row">
+        <div id="content">
+
+
+
+            <div class="gallery">
+                <a target="_blank" href="pics/antarctica.jpg1">
+                    <img src="pics/antarctica.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">My first caption</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="pics/english.png">
+                    <img src="pics/english.png" alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">Another caption/description.</div>
+            </div>
+            <div class="gallery">
+                <a target="_blank" href="pics/antarctica.jpg1">
+                    <img src="pics/antarctica.jpg" alt="Cinque Terre" width="600" height="400">
+                </a>
+                <div class="desc">My first caption</div>
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="pics/english.png">
+                    <img src="pics/english.png" alt="Forest" width="600" height="400">
+                </a>
+                <div class="desc">Another caption/description.</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="footer">
+            Copyright 2021 | Web Design | <a href="mailto:drew.fischer@vtsd.com">akiedes@vtsd.com</a>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>
